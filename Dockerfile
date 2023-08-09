@@ -19,7 +19,7 @@ RUN set -ex \
     && mv ./build/hysteria-* /go/bin/hysteria
 
 # multi-stage builds to create the final image
-FROM alpine AS dist
+FROM alpine:3.18.3 AS dist
 
 LABEL maintainer="mritd <mritd@linux.com>"
 
